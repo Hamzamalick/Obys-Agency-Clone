@@ -1,4 +1,5 @@
 Shery.makeMagnet("nav ul li");
+window.scrollTo(0, 0);
 
 function loadingAnimation() {
   let grow = 0;
@@ -28,13 +29,13 @@ function loadingAnimation() {
     display: "none",
   });
 
-  tl.from(".hero", {
-    y: 1600,
-    delay: 0.2,
-    duration: 0.5,
-    opacity: 0,
-    ease: Power4,
-  });
+  // tl.from(".hero", {
+  //   y: 1600,
+  //   delay: 0.2,
+  //   duration: 0.5,
+  //   opacity: 0,
+  //   ease: Power4,
+  // });
 
   tl.from(".hero-heading h1", {
     y: 150,
