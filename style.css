@@ -1,115 +1,189 @@
 @font-face {
-    font-family: "plain-light";
-    src: url(./fonts/plain-light-webfont.ttf);
+  font-family: "plain-light";
+  src: url(./fonts/plain-light-webfont.ttf);
 }
 @font-face {
-    font-family: "plain-regular";
-    src: url(./fonts/plain-regular-webfont.ttf);
+  font-family: "plain-regular";
+  src: url(./fonts/plain-regular-webfont.ttf);
 }
 @font-face {
-    font-family: "silk-light";
-    src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+  font-family: "silk-light";
+  src: url(./fonts/silkserif-lightitalic-webfont.ttf);
 }
 @font-face {
-    font-family: "silk-italic";
-    src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+  font-family: "silk-italic";
+  src: url(./fonts/silkserif-regularitalic-webfont.ttf);
 }
 :root {
-    --primary-color: #151515; 
-    --secondary-color: #FFA63D; 
-    --text-color: #fff; 
-  }
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html, body{
-    width: 100%;
-    height: 100%;
+  --primary-color: #151515;
+  --secondary-color: #ffa63d;
+  --text-color: #fff;
 }
 
-body{
-    background-color: var(--primary-color);
-    color: var(--text-color);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: "plain-regular";
+}
+/* Cursor */
+.cursor {
+  position: fixed;
+  height: 2vw;
+  width: 2vw;
+  border: 1px solid #ffffffd8;
+  border-radius: 100%;
+  z-index: 9999999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
 }
 
 /* Loader */
-#loader{
-    width: 100%;
-    height: 100vh;
-    background-color: #0B0B0B;
-    font-family: "plain-regular";
-    padding: 20vh 7vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99;
+#loader {
+  width: 100%;
+  height: 100vh;
+  background-color: #0b0b0b;
+  font-family: "plain-regular";
+  padding: 20vh 7vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
-.row{
-    display: flex;
-    gap: 1vw;
-    height: fit-content;
-    overflow: hidden;
-}
-
-.row h1{
-    font-size: 7vw;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-.row h3{
-    font-family: "silk-italic";
-    font-size: 3vw;
-    text-align: right;
-    margin-right: 70px;
-    width: 15vw;
-    font-weight: 400;
+.row {
+  display: flex;
+  gap: 1vw;
+  height: fit-content;
+  overflow: hidden;
 }
 
-.blink{
-    animation-name: anime;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+.row h1 {
+  font-size: 7vw;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.row h3 {
+  font-family: "silk-italic";
+  font-size: 3vw;
+  text-align: right;
+  margin-right: 70px;
+  width: 15vw;
+  font-weight: 400;
+}
+
+.blink {
+  animation-name: anime;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 /* Blink Text Animation */
 @keyframes anime {
-    0% {
-        font-family: "plain-light";
-        -webkit-text-stroke: 1px #fff;
-        color: #fff;
-        font-weight: 500;
-        opacity: 1;
-    }
-    48% {
-        font-family: "plain-light";
-        -webkit-text-stroke: 1px #fff;
-        color: #fff;
-        font-weight: 500;
-        opacity: 0;
-    }
-    50% {
-        font-family: "silk-light";
-        -webkit-text-stroke: 1px #fff;
-        color: transparent;
-        font-weight: 500;
-        opacity: 1;
-    }
-    100% {
-        font-family: "silk-light";
-        -webkit-text-stroke: 1px #fff;
-        color: transparent;
-        font-weight: 500;
-        opacity: 0;
-    }
+  0% {
+    font-family: "plain-light";
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 1;
+  }
+  48% {
+    font-family: "plain-light";
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
+  }
+  50% {
+    font-family: "silk-light";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    opacity: 1;
+  }
+  100% {
+    font-family: "silk-light";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    opacity: 0;
+  }
 }
 /* Loder End */
 
-.hero{
-    width: 100%;
-    height: 100vh;
-    background-color: var(--primary-color);
-    position: relative;
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: 3vw 5vw;
+}
+
+.logo {
+  display: flex;
+  gap: 18vw;
+}
+
+.nav-center p {
+  font-size: 1vw;
+  font-weight: 200;
+  font-family: "plain-light";
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5vw;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* hero section */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.hero-heading {
+  width: 73%;
+  margin-left: 27%;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.hero-heading h1 {
+  font-size: 7.3vw;
+  line-height: 7.3vw;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.hero-heading:nth-child(2) {
+  margin-top: 9vh;
+}
+
+.hero-heading:nth-child(4):hover {
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
 }
