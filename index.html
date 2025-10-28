@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/fav.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-    <!-- Recommended -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -34,7 +34,7 @@
 
     <main>
       <!-- hero section -->
-      <section class="hero">
+      <section class="hero" data-scroll >
         <header>
           <div class="logo">
             <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
@@ -114,7 +114,7 @@
       </section>
 
       <!-- Video Section -->
-      <section class="video-sec">
+      <section class="video-sec" data-scroll data-scroll-speed="-1">
         <div class="video-container">
           <div class="video-cursor">
             <i class="ri-play-fill"></i>
@@ -127,7 +127,7 @@
       </section>
 
       <!-- About Section -->
-      <section class="about">
+      <section class="about" data-scroll >
         <div class="about-content">
           <h1>about obys</h1>
           <div class="underline"></div>
@@ -180,7 +180,7 @@
       </section>
 
       <!-- Morque -->
-      <section class="morque">
+      <section class="morque" data-scroll >
         <div class="m-elem">
           <div class="m-inner">
             <h1>fashion - <span>sport</span>- technology</h1>
@@ -218,7 +218,7 @@
       </section>
 
       <!-- Footer -->
-      <footer>
+      <footer data-scroll >
         <h1>let's create <i class="ri-arrow-right-long-line"></i></h1>
         <div class="underline"></div>
         <div class="f-links">
@@ -263,7 +263,7 @@
       type="text/javascript"
       src="https://unpkg.com/sheryjs/dist/Shery.js"
     ></script>
-    <!-- Recommended -->
+   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
