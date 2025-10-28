@@ -173,7 +173,7 @@ nav ul li a {
   width: 73%;
   margin-left: 27%;
   height: fit-content;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .hero-heading h1 {
@@ -196,6 +196,14 @@ nav ul li a {
   -webkit-text-stroke: 1px #fff;
   font-weight: 400;
   color: transparent;
+}
+.hero1::before {
+  content: "01";
+  font-family: "silk-italic";
+  font-size: 3.5vw;
+  font-weight: 200;
+  position: absolute;
+  left: 18%;
 }
 
 /* video-section */
@@ -257,11 +265,26 @@ nav ul li a {
   text-transform: uppercase;
 }
 
-.about-content .underline {
+.about-content h1::before {
+  content: "03";
+  font-family: "silk-italic";
+  font-size: 3.5vw;
+  font-weight: 200;
+  position: absolute;
+  left: -12%;
+}
+
+.underline {
   height: 2px;
   width: 90%;
   background-color: var(--text-color);
   margin-top: 2vw;
+}
+
+.underline2 {
+  height: 1px;
+  background-color: #ffffffac;
+  width: 90%;
 }
 
 .about-content > p {
@@ -314,4 +337,106 @@ nav ul li a {
 .blue-elem p {
   font-size: 1.2vw;
   width: 50%;
+}
+
+/* morque */
+
+.morque {
+  width: 100%;
+  overflow: hidden;
+  padding: 5vw 0;
+}
+
+.m-elem,
+.m-elem2 {
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: -3.5vw;
+}
+
+.m-inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: morq 45s linear infinite;
+}
+
+.m-elem2 .m-inner {
+  animation-direction: reverse;
+}
+
+.m-inner h1 {
+  font-size: 8vw;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 16px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+}
+
+.m-inner h1 span {
+  font-style: italic;
+  font-family: "silk-italic";
+}
+
+@keyframes morq {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Footer */
+
+footer {
+  padding: 5vw 0;
+  padding-left: 27vw;
+}
+
+footer h1 {
+  font-size: 8vw;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 500;
+}
+
+footer h1 i {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+
+footer h1::before {
+  content: "04";
+  font-family: "silk-italic";
+  font-size: 3.5vw;
+  font-weight: 200;
+  position: absolute;
+  left: -12%;
+}
+
+.f-links {
+  padding: 4vw 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-right: 8vw;
+}
+
+.f-box h6 {
+  font-size: 1.2vw;
+  margin-bottom: 2vw;
+  font-weight: 200;
+}
+.f-box h3 {
+  font-size: 1.8vw;
+  font-weight: 200;
+}
+
+footer h4 {
+  font-size: 1.3vw;
+  margin-top: 3vw;
+  font-weight: 200;
 }
