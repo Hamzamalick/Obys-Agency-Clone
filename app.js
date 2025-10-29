@@ -224,3 +224,4 @@ cursorAnimation();
 scrollAnimation();
 videoAnimation();
 flagAnimation();
+gooeyAnimation();
